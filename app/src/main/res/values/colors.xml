@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base standard colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Premium FinTech Palette -->
+    <color name="bg_start_color">#0A2540</color>
+    <color name="bg_end_color">#030F1C</color>
+    
+    <!-- Secondary & Accent colors -->
+    <color name="color_primary">#00E5FF</color>
+    <color name="color_primary_dark">#00B2CC</color>
+    <color name="color_primary_glow">#1A00E5FF</color> <!-- 10% opacity glow -->
+    <color name="color_accent">#0088FF</color>
+    
+    <!-- Text colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_hint">#64748B</color>
+    
+    <!-- Glassmorphism input fields -->
+    <color name="input_bg_normal">#0FFFFFFF</color> <!-- 6% white opacity -->
+    <color name="input_bg_focused">#18FFFFFF</color> <!-- 9% white opacity -->
+    <color name="input_border_normal">#20FFFFFF</color> <!-- 12% white opacity -->
+    <color name="input_border_focused">#00E5FF</color>
+    
+    <!-- Primary Button Gradients -->
+    <color name="btn_gradient_start">#00E5FF</color>
+    <color name="btn_gradient_end">#0072FF</color>
+    
+    <!-- Ripple & Secondary Actions -->
+    <color name="ripple_light">#40FFFFFF</color>
+    <color name="ripple_celeste">#3300E5FF</color>
 </resources>
