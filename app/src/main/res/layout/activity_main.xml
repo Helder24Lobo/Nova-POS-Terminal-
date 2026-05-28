@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_login_gradient"
-    tools:context=".MainActivity">
+    tools:context=".controller.LoginActivity">
 
     <!-- Scrollable container to maintain perfect responsiveness under different viewport heights and keyboard states -->
     <androidx.core.widget.NestedScrollView
@@ -38,8 +38,8 @@
                 android:id="@+id/iv_logo"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/ic_secure_shield"
                 android:contentDescription="Fintech Secure Logo"
+                android:src="@drawable/ic_secure_shield"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/guideline_top" />
@@ -49,11 +49,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:letterSpacing="0.2"
                 android:text="NOVA PLATINUM"
                 android:textColor="@color/color_primary"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                android:letterSpacing="0.2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_logo" />
@@ -101,11 +101,11 @@
                 android:layout_marginTop="8dp"
                 app:boxBackgroundMode="none"
                 app:hintEnabled="false"
-                app:startIconDrawable="@drawable/ic_mail"
-                app:startIconTint="@color/text_secondary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_email_label">
+                app:layout_constraintTop_toBottomOf="@id/tv_email_label"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:startIconTint="@color/text_secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
@@ -135,14 +135,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:boxBackgroundMode="none"
-                app:hintEnabled="false"
-                app:startIconDrawable="@drawable/ic_lock"
-                app:startIconTint="@color/text_secondary"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/text_secondary"
+                app:hintEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_password_label">
+                app:layout_constraintTop_toBottomOf="@id/tv_password_label"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/text_secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
@@ -172,14 +172,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
                 android:text="¿Olvidaste tu contraseña?"
                 android:textColor="@color/color_primary"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground"
-                android:padding="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_login" />
@@ -189,8 +189,8 @@
                 android:id="@+id/view_divider_left"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="@color/input_border_normal"
                 android:layout_marginEnd="16dp"
+                android:background="@color/input_border_normal"
                 app:layout_constraintBottom_toBottomOf="@id/tv_divider_text"
                 app:layout_constraintEnd_toStartOf="@id/tv_divider_text"
                 app:layout_constraintStart_toStartOf="parent"
@@ -212,8 +212,8 @@
                 android:id="@+id/view_divider_right"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="@color/input_border_normal"
                 android:layout_marginStart="16dp"
+                android:background="@color/input_border_normal"
                 app:layout_constraintBottom_toBottomOf="@id/tv_divider_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_divider_text"
@@ -226,9 +226,9 @@
                 android:layout_height="64dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_button_biometric"
-                android:src="@drawable/ic_fingerprint"
                 android:contentDescription="Acceso biométrico"
                 android:scaleType="center"
+                android:src="@drawable/ic_fingerprint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_divider_text" />
@@ -239,8 +239,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
-                android:orientation="horizontal"
                 android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -250,18 +250,18 @@
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/ic_lock"
-                    app:tint="@color/text_secondary"
                     android:layout_marginEnd="6dp"
-                    android:contentDescription="Secure Lock Badge" />
+                    android:contentDescription="Secure Lock Badge"
+                    android:src="@drawable/ic_lock"
+                    app:tint="@color/text_secondary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
                     android:text="Protegido con seguridad bancaria"
                     android:textColor="@color/text_secondary"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
